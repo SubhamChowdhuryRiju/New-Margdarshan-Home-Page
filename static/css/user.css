@@ -69,9 +69,9 @@
 background-color: black;
 border-radius: 50%;
 }
-.review .prev-butn{
+/* .review .prev-butn{
     display:none;
-}
+} */
 .review .carousel-indicators button {
 background-color: black !important;
 border-radius: 50% !important;
@@ -105,7 +105,7 @@ border: none !important;
     display: flex;
     justify-content: center;
 }
-.review .next-butn{
+/* .review .next-butn{
     display:none;
-}
+} */
 }
