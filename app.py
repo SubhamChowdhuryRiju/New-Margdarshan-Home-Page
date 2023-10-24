@@ -17,4 +17,4 @@ def blog():
     return render_template('blog2.html', blog_data = data.blog_data)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=3000)
+    app.run()
