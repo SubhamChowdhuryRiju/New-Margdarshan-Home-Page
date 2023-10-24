@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="nb">
+            <div class="left">
+                <div class="openMenu">
+                    <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+                </div>
+                <a class="image-link-mob" href="/"><img class="navlogo " src="../static/images/marglogo.svg" alt=""></a>
+            </div>
+            <a class="image-link" href="/"><img class="navlogo " src="../static/images/marglogo.svg" alt=""></a>
+            <div class="navright">
+
+
+                <div class="nab" id="nab">
+                    <ul class="navbar-nav mainMenu1" id="">
+                        <li>
+                            <div class="menulogo"><img class="navlogo img-fluid" src="../static/images/marglogo.svg" alt="">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/blog">Blogs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="eng" href="#">Engineering
+                                <i class="fa fa-regular fa-chevron-down" style="color: #ffffff;"></i>
+                            </a>
+                            <div class="draw">
+                                <table class="tb">
+                                    <tr class="drop-row">
+                                        <td class="first-drop" width="50%">
+                                            <a id="drop-left1" href="#">Test Series</a>
+                                            <a class="drop-link" href="https://marg-darshan.com/test-series/iit">Jee
+                                                Mains Test Series</a>
+                                            <a class="drop-link" href="#">Jee Advanced Test Series</a>
+
+                                        </td>
+                                        <td class="first-drop" width="50%">
+                                            <a id="drop-left2" href="#">Study Material</a>
+                                            <a class="drop-link"
+                                                href="https://marg-darshan.com/study-material/ncert-books/ncert-books-for-class-12th/ncert-books-for-class-12th-overall">NCERT</a>
+                                            <a class="drop-link" href="#">Previous Year Question Paper for JEE Main</a>
+                                            <a class="drop-link"
+                                                href="https://marg-darshan.com/study-material/notes/formula-book/formula-book-for-jee-main-2023">Formula
+                                                Book for JEE Main</a>
+                                            <a class="drop-link" href="#">Formula Book for JEE Advanced</a>
+                                            <a class="drop-link" href="#">Complete Notes for JEE Main</a>
+                                            <a class="drop-link" href="#">Complete Notes for JEE Advanced</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="med" href="#">Medical
+                                <i class="fa fa-regular fa-chevron-down" style="color: #ffffff;"></i></a>
+                            <div class="draw">
+                                <table class="tb">
+                                    <tr class="drop-row">
+                                        <td class="first-drop" width="50%">
+                                            <a id="drop-left1med" href="#">Test Series</a>
+                                            <a class="drop-link" href="#">NEET Test Series</a>
+
+                                        </td>
+                                        <td class="first-drop" width="50%">
+                                            <a id="drop-left2med" href="#">Study Material</a>
+                                            <a class="drop-link" href="#">NCERT</a>
+                                            <a class="drop-link"
+                                                href="https://marg-darshan.com/study-material/previous-year-paper/neet/neet-pyqs-with-solutions">Previous
+                                                Year Question Paper for NEET</a>
+                                            <a class="drop-link" href="#">Short Notes for NEET</a>
+                                            <a class="drop-link" href="#">Complete Notes for NEET</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://marg-darshan.com/CollegePredictor">College Predictor</a>
+                        </li>
+                        <li class="nav-in">
+                            <button type="submit" class="butn" id="butn">Sign-in</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="nav-out">
+                <a href="https://marg-darshan.com/login"><button type="submit" class="butn">Sign-in</button></a>
+            </div>
+            <div class="mainMenu">
+                <div class="menu-head">
+                    <a class="image-link-mob" href="#"><img class="navlogo " src="../static/images/marglogo.svg" alt=""></a>
+                    <div class="closeMenu"><i class="fa fa-times"></i></div>
+
+                </div>
+                <hr class="head-hr">
+                <br>
+                <a class="mob-rowlist" href="#blog">
+                    <div><img class="mob-imglist" src="../static/images/mobblog.svg" alt="">
+                        <i class="mob-textlist">Blog</i>
+                    </div>
+                    <i class="fa fa-greater-than" style="color: #ffffff;"></i>
+                </a>
+                <hr>
+                <div class="mob-rowlist" id="mobeng">
+                    <div><img class="mob-imglist" src="../static/images/mobeng.svg" alt="">
+                        <i class="mob-textlist">Engineering</i>
+                    </div>
+                    <i class="fa fa-greater-than" style="color: #ffffff;"></i>
+                </div>
+                <div class="mobdrop1">
+                    <a class="mob-subdrop1" href="#"><i class="mob-textlist">Test Series</i><i
+                            class="fa-solid fa-circle-chevron-down"></i></a>
+                    <div class="mob-nest1">
+                        <hr class="head-hr">
+                        <a class="mob-nestdrop1" href="https://marg-darshan.com/test-series/iit">Jee Mains Test
+                            Series</a><br>
+                        <a class="mob-nestdrop1" href="#">Jee Advanced Test Series</a><br>
+                    </div>
+                    <hr class="head-hr">
+                    <a class="mob-subdrop2" href="#"><i class="mob-textlist">Study Material</i><i
+                            class="fa-solid fa-circle-chevron-down"></i></a>
+                    <div class="mob-nest2">
+                        <hr class="head-hr">
+                        <a class="mob-nestdrop2"
+                            href="https://marg-darshan.com/study-material/ncert-books/ncert-books-for-class-12th/ncert-books-for-class-12th-overall">NCERT</a><br>
+                        <a class="mob-nestdrop2" href="#">Previous Year Question Paper for JEE Main</a><br>
+                        <a class="mob-nestdrop2"
+                            href="https://marg-darshan.com/study-material/notes/formula-book/formula-book-for-jee-main-2023">Formula
+                            Book for JEE Main</a><br>
+                        <a class="mob-nestdrop2" href="#">Formula Book for JEE Advanced</a><br>
+                        <a class="mob-nestdrop2" href="#">Complete Notes for JEE Main</a><br>
+                        <a class="mob-nestdrop2" href="#">Complete Notes for JEE Advanced</a><br>
+                    </div>
+                </div>
+                <hr>
+                <div class="mob-rowlist" id="mobmed">
+                    <div><img class="mob-imglist" src="../static/images/mobmed.svg" alt="">
+                        <i class="mob-textlist">Medical</i>
+                    </div>
+                    <i class="fa fa-greater-than" style="color: #ffffff;"></i>
+                </div>
+
+                <div class="mobdrop2">
+                    <a class="mob2-subdrop1" href="#"><i class="mob-textlist">Test Series</i><i
+                            class="fa-solid fa-circle-chevron-down"></i></a>
+                    <div class="mob2-nest1">
+                        <hr class="head-hr">
+                        <a class="mob-nestdrop1" href="#">NEET Test Series</a><br>
+                    </div>
+                    <hr class="head-hr">
+                    <a class="mob2-subdrop2" href="#"><i class="mob-textlist">Study Material</i><i
+                            class="fa-solid fa-circle-chevron-down"></i></a>
+                    <div class="mob2-nest2">
+                        <hr class="head-hr">
+                        <a class="mob-nestdrop2" href="#">NCERT</a><br>
+                        <a class="mob-nestdrop2"
+                            href="https://marg-darshan.com/study-material/previous-year-paper/neet/neet-pyqs-with-solutions">Previous
+                            Year Question Paper for NEET</a><br>
+                        <a class="mob-nestdrop2" href="#">Short Notes for NEET</a><br>
+                        <a class="mob-nestdrop2" href="#">Complete Notes for NEET</a><br>
+                    </div>
+                </div>
+
+
+                <hr>
+                <a class="mob-rowlist" href="https://marg-darshan.com/CollegePredictor">
+                    <div><img class="mob-imglist" src="../static/images/mobcolg.svg" alt="">
+                        <i class="mob-textlist">College Predictor</i>
+                    </div>
+                    <i class="fa fa-greater-than" style="color: #ffffff;"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap</title>
+</head>
+<body>
+    <div class="roadmap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 road-title mb-3">
+                    <h4 class="rd-title">Roadmap</h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div data-aos="fade-up" class="road-list">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/77KlpbV2a3c"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="rd-btns col-lg-6 col-md-6 col-sm-12 p-3">
+                    {% for data in roadmap_data %}
+                    <div class="rd-row">
+                        <div class="rd-icon">
+                            <button><img src={{data.image}} alt=""></button>
+                        </div>
+                        <div class="rd-text">
+                            <h6> {{ data.title }} </h6>
+                            <p> {{ data.desc }} </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

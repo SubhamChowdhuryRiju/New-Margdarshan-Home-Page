@@ -1,0 +1,4 @@
+1. Changes made into the index.html to beak it into modules.
+2. Injected Jinja2 to reduce the resource utilization 
+    and optimize the code.
+3. Created a new blog2.html to create the blog page separately.

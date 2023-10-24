@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <div class="products">
+        <h3 class="product-title">Products & Services</h3>
+        <div class="college-pred mt-5">
+            <h5><img class="me-2" src="../static/images/Vector-4.png" width="25px" height="25px" alt=""> College Predictor</h5>
+            <p class="pred-desc">Confused about which college to apply to? A college predictor tool can help you make an
+                informed decision
+                based on your interests, skills, and preferences. This tool is also mastered to suggest best possible
+                choice as per your academic performance. Don't stress, let the tool do the work for you!</p>
+            <div class="college-pred-scroll mt-5">
+                {% for predictor in predictor_data %}
+                <div data-aos="fade-up" class="college-pred-img img1" alt="">
+                    <img class="card-img" src={{predictor.image}} alt="">
+                    <div class="card-img-overlay p-3">
+                        <button class="card-btn"> {{predictor.title}} </button>
+                        <p class="btn-desc mt-3"> {{predictor.desc}} </p>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div data-aos="fade-up" class="college-pred-img img1" alt="">
+                    <img class="card-img" src="../static/images/img2.png" alt="">
+                    <div class="card-img-overlay p-3">
+                        <button class="card-btn">MH-CET Predictor</button>
+                        <p class="btn-desc mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                            libero et velit.</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="college-pred-img img1" alt="">
+                    <img class="card-img" src="../static/images/img3.png" alt="">
+                    <div class="card-img-overlay p-3">
+                        <button class="card-btn">MP-DTE Predictor</button>
+                        <p class="btn-desc mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                            libero et velit.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="study-material mt-5">
+            <h5><img class="me-2" src="../static/images/Vector-5.png" width="25px" height="25px" alt=""> Study Material</h5>
+            <p class="pred-desc">Margdarshan is the place to be for free, high-quality study materials. We offer a
+                diverse range of materials that are regularly updated by experts, ensuring that you always have access
+                to the best resources for your academic success. So, whether you are preparing for an exam or looking to
+                improve your understanding of a subject, we've got you covered!</p>
+
+            <div data-aos="fade-up" class="study-mat-card">
+                <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4">
+                    {% for material in study_material_data %}
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src={{material.image}} class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"> {{material.title}} </h5>
+                                <p class="card-text"> {{material.desc}} </p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="">Know More <img width="20px" src="../static/images/arrow-link.png"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <!-- <div class="col">
+                        <div class="card h-100">
+                            <img src="../static/images/Rectangle 100 (1).png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">NCERT Books</h5>
+                                <p class="card-text">With our NCERT book, solidify your understanding of concepts. Click
+                                    now to begin learning more effectively.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://marg-darshan.com/study-material/ncert-books/ncert-books-for-class-12th/ncert-books-for-class-12th-overall"
+                                    class="">Know More <img width="20px" src="../static/images/arrow-link.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../static/images/Rectangle 100 (2).png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">PYQ’s</h5>
+                                <p class="card-text">Perfection comes with practice! With this selection of questions
+                                    from prior years, test your knowledge. Click right now to begin exercising.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="">Know More <img width="20px" src="../static/images/arrow-link.png"
+                                        alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="../static/images/Rectangle 100 (3).png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Formula Book</h5>
+                                <p class="card-text">With the help of our extensive formula book, unleash the potential
+                                    of formulas. Click now to begin learning more effectively.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://marg-darshan.com/study-material/notes/formula-book/formula-book-for-jee-main-2023"
+                                    class="">Know More <img width="20px" src="../static/images/arrow-link.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="test-series mt-5">
+            <h5><img class="me-2" src="../static/images/Group.png" width="25px" height="25px" alt=""> Test Series</h5>
+            <p class="pred-desc">At Margdarshan, we understand that acing exams can be challenging. That's why we offer
+                a wide range of test series designed to prepare you for success. Our series simulate the actual exam
+                environment, providing you with an real exam experience. With personalized feedback and detailed
+                performance analysis, you can track your progress and identify areas that need improvement. Join our
+                test series now and start your journey toward academic success!</p>
+
+            <div class="test-img">
+                <div class="row">
+                    {% for test in test_series_data %}
+                    <div class="col-lg-6 ">
+                        <figure data-aos="fade-up">
+                            <div class="parent">
+                                <div id="child1" class="child child1"></div>
+                                <div class="test-img-text">
+                                    <h5> {{test.title}} </h5>
+                                    <p class="test-desc mt-1"> {{test.desc}} </p>
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                    {% endfor %}
+                    <!-- <div class="col-lg-6 ">
+                        <figure data-aos="fade-up">
+                            <div class="parent">
+                                <div id="child2" class="child child2"></div>
+                                <div class="test-img-text">
+                                    <h5>For NEET</h5>
+                                    <p class="test-desc mt-1">Use our NEET test series to assess your knowledge.
+                                        Multiple practice tests to enhance your preparation. Enroll today to begin your
+                                        path to success.</p>
+                                </div>
+                            </div>
+                        </figure>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
