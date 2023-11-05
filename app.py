@@ -70,7 +70,7 @@ def login():
                 return '<h1>Invalid Password</h1>'
         else:
             # flash('Invalid username or password', 'danger')
-            return '<h1>Invalid Password</h1>'
+            return '<h1>Invalid User</h1>'
 
     return render_template('login.html')
 
