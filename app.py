@@ -125,4 +125,4 @@ def register():
     return render_template('sign_up.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
