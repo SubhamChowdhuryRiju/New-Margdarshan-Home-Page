@@ -2,8 +2,7 @@ from flask import Flask, url_for, render_template, request, redirect, session
 import data
 import sqlite3
 import os
-import bcrypt
-import webbrowser
+import hashlib
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'MARGDARSHAN'
@@ -26,6 +25,27 @@ def create_table():
     conn.close()
 
 create_table()
+
+# Function to generate a salt (a random value to make each password hash unique)
+def generate_salt():
+    return os.urandom(16)  # 16 bytes (128 bits) of random data
+
+# Function to hash a password with a salt
+def hash_password(password, salt):
+    # Combine the salt and the password
+    salted_password = salt + password.encode()
+    
+    # Hash the salted password using SHA-256 (you can use other hash functions like SHA-512)
+    hashed_password = hashlib.sha256(salted_password).hexdigest()
+    
+    return hashed_password
+
+# Function to verify a password
+def verify_password(stored_password, input_password, salt):
+    hashed_input_password = hash_password(input_password, salt)
+    return stored_password == hashed_input_password
+
+salt = generate_salt()
 
 @app.route('/')
 def home():
@@ -56,21 +76,20 @@ def login():
             cursor.execute("SELECT password FROM users WHERE username = ?", (username,))
             user_pass = cursor.fetchone()
             conn.close()
-            if bcrypt.checkpw(password.encode('utf-8'), user_pass[0]):
+
+            if verify_password(user_pass[0], password, salt):
                 session['username'] = username
                 # flash('Login successful', 'success')
                 # Define the alert message
                 alert_message = "Login Successfull."
 
-                # Open the current web page with the alert message
-                webbrowser.open(f"javascript:alert('{alert_message}')")
-                return '<h1>Login Successfull.</h1>'
+                return render_template('login_status.html', status='Login Successfull.')
             else:
                 # flash('Invalid username or password', 'danger')
-                return '<h1>Invalid Password</h1>'
+                return render_template('login_status.html', status='Password is Incorrect.')
         else:
             # flash('Invalid username or password', 'danger')
-            return '<h1>Invalid User</h1>'
+            return render_template('login_status.html', status='Invalid user.')
 
     return render_template('login.html')
 
@@ -96,7 +115,7 @@ def register():
             return '<h1>User Already Exists</h1>'
         else:
             cursor.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, 
-                        bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())))
+                            hash_password(password, salt)))
             conn.commit()
             # flash('Registration successful', 'success')
             return redirect(url_for('login'))
@@ -106,4 +125,4 @@ def register():
     return render_template('sign_up.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
